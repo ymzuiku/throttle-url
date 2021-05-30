@@ -15,9 +15,13 @@ import { throttleUrl } from "./throttleUrl";
 
 async function ping() {
   const removeThrottle = throttleUrl({
+    // 接口名称，用来计数标记
     url: "/ping",
+    // 并发最大值任务数
     max: 100,
+    // 每个任务最大时间，超时自动移除当前任务
     timeout: 5000,
+    // 当达到并发最大值时执行
     onMax: (i) => {
       throw `请稍后再试，当前并发: ${i}`;
     },
