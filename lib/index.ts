@@ -37,6 +37,9 @@ export const throttleUrl = ({
     }
   };
 
+  // 超时后，移除某个任务
+  setTimeout(removeId, timeout);
+
   const size = box.size;
 
   // 若当前任务超过最大值, 执行 onMax 并且返回, 移除方法
@@ -47,9 +50,6 @@ export const throttleUrl = ({
 
   // 增加一个任务
   box.add(id);
-
-  // 超时后，移除某个任务
-  setTimeout(removeId, timeout);
 
   return removeId;
 };
