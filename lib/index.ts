@@ -49,11 +49,7 @@ export const throttleUrl = ({
   box.add(id);
 
   // 超时后，移除某个任务
-  setTimeout(() => {
-    if (box.has(id)) {
-      box.delete(id);
-    }
-  }, timeout);
+  setTimeout(removeId, timeout);
 
   return removeId;
 };
