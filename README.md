@@ -23,7 +23,7 @@ async function ping() {
     timeout: 5000,
     // 当达到并发最大值时执行
     onMax: (i) => {
-      throw `请稍后再试，当前并发: ${i}`;
+      throw Error(`请稍后再试，当前并发: ${i}`);
     },
   });
 
