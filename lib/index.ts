@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 // 缓存对象，用于测试或检测
 export const throttleUrlCache = {} as { [url: string]: Set<string> };
 
-/* 限制一个 url 的请求间隔，若函数返回为的对象包含 error，表示需要阻拦 */
+/* 限制一个 url 的并发数，返回一个remove方法，在接口执行结束时（成功或失败）调用remove方法 */
 export const throttleUrl = ({
   url,
   max,
