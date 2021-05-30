@@ -1,5 +1,13 @@
 # throttle-url
 
+## Install
+
+```js
+yarn add throttle-url
+```
+
+## Example
+
 为某个接口实现最大并发量
 
 ```ts
