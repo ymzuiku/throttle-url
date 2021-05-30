@@ -39,6 +39,6 @@ async function ping() {
   }
 
   removeThrottle();
-  return "aa";
+  return "pong";
 }
 ```
