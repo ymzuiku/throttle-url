@@ -11,7 +11,7 @@ yarn add throttle-url
 为某个接口实现最大并发量
 
 ```ts
-import { throttleUrl } from "./throttleUrl";
+import { throttleUrl } from "throttle-url";
 
 async function ping() {
   const removeThrottle = throttleUrl({
