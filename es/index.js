@@ -1,0 +1,1 @@
+import{nanoid as d}from"nanoid";var n={},c=({url:r,max:s,onMax:a,timeout:m})=>{n[r]||(n[r]=new Set);let t=n[r],e=d(),o=()=>{t.has(e)&&t.delete(e)},i=t.size;return i>=s?(a(i),o):(t.add(e),setTimeout(()=>{t.has(e)&&t.delete(e)},m),o)};export{c as throttleUrl,n as throttleUrlCache};
